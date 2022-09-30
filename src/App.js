@@ -9,6 +9,7 @@ import Register from './components/register';
 import Home from '../src/components/home';
 import './App.css';
 import Logout from './components/logout';
+import ForgotPassword from './components/forgotPassword';
 
 
 class App extends React.Component {
@@ -25,9 +26,10 @@ class App extends React.Component {
       <NavBar user={user} />
       <main className="container">
         <Switch>
-        <Route path={"/market-place"} component={Home} />
+          <Route path={"/market-place"} component={Home} />
           <Route path={"/register"} component={Register} />
           <Route path={"/login"} component={LoginForm} />
+          <Route path={"/forgot-password"} component={ForgotPassword} />
           <Route path={"/logout"} component={Logout} />
           <Route path="/not-found" component={NotFound} />
           <Redirect from="/" exact to={"/market-place"} />

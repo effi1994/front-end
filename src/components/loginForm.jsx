@@ -49,7 +49,12 @@ class LoginForm extends Form {
             {this.renderInput("password", "Password", "password", "", "")}
           </div>
           <div className="col-12">
-            {this.renderButton("Login")} <Link to={"/register"}>Register</Link>
+            <br/>
+            {this.renderButton("Login")} 
+            <br/>
+            <Link to={"/forgot-password"}>Forgot Password</Link>
+            <br/>
+            <Link to={"/register"}>Register</Link>
           </div>
         </form>
       </div>
