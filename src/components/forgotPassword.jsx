@@ -15,7 +15,7 @@ class ForgotPassword extends Form {
 
   doSubmit = async () => {
     try {
-      const { data } = this.state;
+      //const { data } = this.state;
       const { state } = this.props.location;
       window.location = state ? state.from.pathname : "/";
     } catch (ex) {
