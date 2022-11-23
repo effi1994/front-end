@@ -1,7 +1,7 @@
 import {  Route,Switch,Redirect } from 'react-router-dom';
 import { ToastContainer } from "react-toastify";
 import React, { Fragment } from 'react';
-import auth from "../src/services/authService";
+//import auth from "../src/services/authService";
 import mockDb from './services/mokDb';
 import NotFound from './components/notFound';
 import NavBar from './components/navbar';
