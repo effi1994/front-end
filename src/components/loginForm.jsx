@@ -3,6 +3,7 @@ import Joi from "joi-browser";
 import Form from "./common/form";
 import auth from "../services/authService";
 import { Link, Redirect } from "react-router-dom";
+import mockDb from '../services/mokDb';
 class LoginForm extends Form {
   state = {
     data: { username: "", password: "" },
@@ -15,7 +16,8 @@ class LoginForm extends Form {
   };
 
   doSubmit = async () => {
-    try {
+     mockDb.login(this.state.data.username,this.state.data.password);
+  /*   try {
       const { data } = this.state;
       await auth.login(data.username,data.password);
       const {state} =this.props.location;
@@ -26,7 +28,7 @@ class LoginForm extends Form {
         errors.username = ex.response.data;
         this.setState({ errors });
       }
-    }
+    } */
   };
 
   render() {

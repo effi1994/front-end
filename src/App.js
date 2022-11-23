@@ -2,6 +2,7 @@ import {  Route,Switch,Redirect } from 'react-router-dom';
 import { ToastContainer } from "react-toastify";
 import React, { Fragment } from 'react';
 import auth from "../src/services/authService";
+import mockDb from './services/mokDb';
 import NotFound from './components/notFound';
 import NavBar from './components/navbar';
 import LoginForm from './components/loginForm';
@@ -15,9 +16,13 @@ import ForgotPassword from './components/forgotPassword';
 class App extends React.Component {
   state = {  } 
   componentDidMount() {
-    const user =auth.getCurrentUser();
-    this.setState({user});
+     const user=mockDb.getUser();
+     /* const user =auth.getCurrentUser(); */
+     console.log(user)
+    this.setState({user}); 
    }
+
+  
   render() { 
     const {user} =this.state;
     return ( <Fragment>
